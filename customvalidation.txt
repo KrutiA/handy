@@ -1,3 +1,5 @@
+1) email-domain is a class of element
+
 <script type="text/javascript">
   require([
   'jquery',
