@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  require([
+  'jquery',
+  'jquery/ui',
+  'jquery/validate',
+  'mage/translate'
+  ], function($){ 
+  $.validator.addMethod(
+  'email-domain', function (value) { 
+
+     var rejectList = [ "gmail" , "hotmail" , "outlook" , "yahoo" , "ymail" , "aol" ];
+      var emailValue = $('#email_address').val(); // To Get Value (can use getElementById)
+       
+        var splitArray = emailValue.split('@'); // To Get Array
+        var domain = splitArray[1].split('.');
+        
+        //console.log(splitArray[1]);
+
+        if(rejectList.indexOf(domain[0]) >= 0)
+        {
+        // Means it has the rejected domains
+        return false;
+        }
+        return true;
+
+  }, $.mage.__('Personal Email is not allowed.'));
+  }); 
+</script>
