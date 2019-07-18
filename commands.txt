@@ -1,0 +1,8 @@
+Search for 'noroute' keyword
+grep -irl 'noroute' ./app/code/
+
+Create tar
+tar -xvf Filename.tar.gz
+
+Untar
+tar -cvf name.tar /path/to/directory
